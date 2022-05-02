@@ -16,7 +16,6 @@ function App() {
               richtext: RichTextSlice,
             }}
           />
-          <pre>{JSON.stringify(document)}</pre>
         </>
       )}
     </>
