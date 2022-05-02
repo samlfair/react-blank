@@ -6,19 +6,16 @@ function App() {
   const [document] = useFirstPrismicDocument()
 
   return (
-    <>
-      {document && (
-        <>
-          <SliceZone
-            slices={document.data.body}
-            components={{
-              rich_text_slice: RichTextSlice,
-              richtext: RichTextSlice,
-            }}
-          />
-        </>
-      )}
-    </>
+    document && (
+      <div className="App">
+        <SliceZone
+          slices={document.data.body}
+          components={{
+            rich_text_slice: RichTextSlice,
+          }}
+        />
+      </div>
+    )
   )
 }
 
